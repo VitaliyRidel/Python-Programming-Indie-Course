@@ -11,31 +11,20 @@
 # Примечание: функциями min и max пользоваться нельзя, мы же условный оператор изучаем).
 
 
-a,b,c = map(int,input().split())
-if a>b:
-    if a>c:
-        print(a)
-    else:
-        print(c)
-else:
+a,b,c = map(int, input().split())
+if a>b and a>c:
     if b>c:
-        print(b)
+        print(a-c)
     else:
-        print(c)
-if a<b:
-    if a<c:
-        print(a)
-    else:
-        print(c)
+        print(a-b)
 else:
-    if b<c:
-        print(b)
-    else:
-        print(c)
-        if a>b and a<b:
-            print(a-b)
+    if b>a and b>c:
+        if a>c:
+            print(b-c)
         else:
-            if b>c and b<c:
-                print(b-c)
-            else:
-                print(a-с)
+            print(b-a)
+if c>a and c>b:
+    if b>a:
+        print(c-a)
+    else:
+        print(c-b)
